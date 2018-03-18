@@ -1,0 +1,33 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module.
+ */]
+[module helperController('http://www.application.org')/]
+[import services::helperFQN  /]
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public Controller(arg0 : Boolean) : OclVoid
+	= invoke(getBeansCodeIgniterFQN(), 'Controller()', Sequence{arg0})
+/]
+
+[**
+ * The documentation of the query
+ */]
+[query public isHookeable(anOclAny: OclAny) : Boolean
+	= invoke(getBeansCodeIgniterFQN(), 'isHookeable()', Sequence{})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public setHookeable(arg0 : Boolean) : OclVoid
+	= invoke(getBeansCodeIgniterFQN(), 'setHookeable()', Sequence{arg0})
+/]
+
+[**
+ * The documentation of the query
+ */]
+

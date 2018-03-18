@@ -1,0 +1,19 @@
+[comment encoding = UTF-8 /]
+[module helperFileReader('http://www.application.org')/]
+[import services::helperFQN  /]
+
+[query public getFile(arg0 : String) : String
+	= invoke(getFileReaderFQN(), 'getFile(java.lang.String)', Sequence{arg0})          
+/] 
+
+[query public getFile(arg0 : String, arg1 : String) : String
+	= invoke(getFileReaderFQN(), 'getFile(java.lang.String, java.lang.String)', Sequence{arg0, arg1})
+/]
+
+[query public makeFolder(arg0 : String) : OclVoid
+	= invoke(getFileReaderFQN(), 'makeFolder(java.lang.String)', Sequence{arg0})
+/]
+
+[query public renameFolder(arg0 : String, arg1 : String) : String
+	= invoke(getFileReaderFQN(), 'renameFolder(java.lang.String, java.lang.String)', Sequence{arg0, arg1})
+/]

@@ -1,0 +1,11 @@
+[comment encoding = UTF-8 /]
+[module helperCodeigniterPaths('http://www.application.org')/]
+[import services::helperFQN  /]
+
+[query public getBaseDir(anOclAny: OclAny) : String
+	= invoke(getCodeigniterPathsFQN(), 'getBaseDir()', Sequence{})
+/]
+
+[comment][query public getRoutesCIPath(anOclAny: OclAny) : String
+	= invoke(getRoutesFQN(), 'getRoutes()', Sequence{})
+/][/comment]

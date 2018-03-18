@@ -1,0 +1,15 @@
+[comment encoding = UTF-8 /]
+
+[module main('http://www.application.org/coreMVC')]
+[ import main::controller /]
+[ import main::model /]
+[ import main::view /]
+[comment][ import main::application /][/comment]
+
+[template public main(anApp : Application)]
+[comment @main/]
+[comment][ application(anApp) /][/comment]
+[ makeControllers(anApp) /]
+[ makeModels(anApp) /]
+[ makeViews(anApp) /]
+[/template]

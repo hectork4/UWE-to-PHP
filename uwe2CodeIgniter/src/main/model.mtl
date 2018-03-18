@@ -1,0 +1,32 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module model.
+ */]
+[module model('http://www.application.org')]
+
+[import services::helperFileReader /]
+[import services::helperApplication /]
+[import files::writeModelSkeleton  /]
+[import files::writeModelRequest /]
+[import services::helperCodeigniterPaths /]
+[import services::helperCodeigniterInputPaths /]
+
+[**
+ * The documentation of the template generateElement.
+ * @param aModel
+ */]
+
+[template public makeModels(anApp : Application)]
+[comment @main/]
+	[let pm : PackageModel = anApp.aPackageModel]
+    [let base_dir : String = getBaseDir() ]
+	[let pathModels : String = getPathModel() + pm.name + 'Models/']
+      [ self.makeFolder(base_dir + pathModels) /]
+      [for (model : Model | pm.models)]
+	  	 [ writeModelSkeleton(anApp.name, pathModels, model) /]
+      [/for]
+   [/let]
+   [/let]
+   [/let]
+[/template]
+

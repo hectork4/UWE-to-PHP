@@ -1,0 +1,27 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module writeModelSkeleton.
+ */]
+[module writeModelSkeleton('http://www.application.org')]
+
+[import services::helperApplication /]
+
+[**
+ * The documentation of the template generateElement.
+ * @param aModel
+ */]
+
+[template public writeModelSkeleton(appName : String, path : String, model : Model)]
+[if (appName.oclIsUndefined() or appName = '' )][appName = getDefaultAppName('CodeIgniter') /][/if]
+[file (path + model.name.toUpperFirst() + '.php', false, 'UTF-8')]
+<?php
+		
+class [model.name.toUpperFirst() /] extends CI_Model {
+
+[for (at : Attribute | model.attributes)]
+	private $[at.name.toLowerFirst()/];
+[/for]
+
+}
+[/file]
+[/template]

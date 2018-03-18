@@ -1,0 +1,27 @@
+[comment encoding = UTF-8 /]
+[module helperCodeigniterInputPaths('http://www.application.org')/]
+[import services::helperFQN  /]
+
+[query public getRoutesPath(anOclAny: OclAny) : String
+	= invoke(getCodeIgniterInputPathFQN(), 'getRoutesPath()', Sequence{})
+/]
+
+[query public setRoutesPath(arg0 : String) : OclVoid
+	= invoke(getCodeIgniterInputPathFQN(), 'setRoutesPath(java.lang.String)', Sequence{arg0})
+/]
+
+[query public getConfigAppPath(anOclAny: OclAny) : String
+	= invoke(getCodeIgniterInputPathFQN(), 'getConfigAppPath()', Sequence{})
+/]
+
+[query public getConfigPath(anOclAny: OclAny) : String
+	= invoke(getCodeIgniterInputPathFQN(), 'getConfigPath()', Sequence{})
+/]
+
+[query public getPathModel(anOclAny: OclAny) : String
+	= invoke(getCodeIgniterInputPathFQN(), 'getPathModel()', Sequence{})
+/]
+
+[query public getPathView(anOclAny: OclAny) : String
+	= invoke(getCodeIgniterInputPathFQN(), 'getPathView()', Sequence{})
+/]

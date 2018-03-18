@@ -1,0 +1,58 @@
+[comment encoding = UTF-8 /]
+[module helperFQN('http://www.application.org')/]
+
+[**
+* Beans
+*/]
+
+[query public getBeansApplicationFQN(anOclAny: OclAny) : String
+	= invoke('main.beans.Application', 'getFQN()', Sequence{})
+/]
+
+[query public getBeansPackageFrameworkFQN(anOclAny: OclAny) : String
+	= invoke('main.beans.PackageFramework', 'getFQN()', Sequence{})
+/]
+
+[query public getBeansModelAttributeFQN(anOclAny: OclAny) : String
+	= invoke('main.beans.ModelAttribute', 'getFQN()', Sequence{})
+/]
+
+[query public getBeansLanguageFQN(anOclAny: OclAny) : String
+	= invoke('main.beans.Language', 'getFQN()', Sequence{})
+/]
+
+[query public getBeansControllerFQN(anOclAny: OclAny) : String
+	= invoke('main.beans.Controller', 'getFQN()', Sequence{})
+/]
+
+[query public getBeansAppTypeFQN(anOclAny: OclAny) : String
+	= invoke('main.beans.AppType', 'getFQN()', Sequence{})
+/]
+
+[**
+* Services
+*/]
+
+[query public getStringUtilFQN(anOclAny: OclAny) : String
+	= invoke('services.StringUtil', 'getFQN()', Sequence{})
+/]
+
+[query public getCodeigniterPathsFQN(anOclAny: OclAny) : String
+	= invoke('services.CodeigniterPaths', 'getFQN()', Sequence{})
+/]
+
+[query public getBeansAppFQN(anOclAny: OclAny) : String
+	= invoke('main.beans.Application', 'getFQN()', Sequence{})
+/]
+
+[query public getCodeIgniterInputPathFQN(anOclAny: OclAny) : String
+	= invoke('services.CodeigniterInputPaths', 'getFQN()', Sequence{})
+/]
+
+[query public getBeansCodeIgniterFQN(anOclAny: OclAny) : String
+	= invoke('main.beans.Controller', 'getFQN()', Sequence{})
+/]
+
+[query public getFileReaderFQN(anOclAny: OclAny) : String
+	= invoke('services.FileReader', 'getFQN()', Sequence{})
+/]

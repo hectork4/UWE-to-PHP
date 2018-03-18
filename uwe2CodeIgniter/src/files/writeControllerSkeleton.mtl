@@ -1,0 +1,43 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module writeControllerSkeleton.
+ */]
+[module writeControllerSkeleton('http://www.application.org')]
+
+[import services::helperApplication /]
+[import main::view /]
+[import services::helperController /]
+[import services::helperCodeigniterInputPaths /]
+[import services::helperStringUtil /]
+
+
+[**
+ * The documentation of the template generateElement.
+ * @param aModel
+ */]
+
+
+[comment]quiza pueda traer el path desde el helper y no pasarselo como param[/comment]
+[template public writeControllerSkeleton(path : String, controller : Controller, appName : String, pmName : String)]
+[file (path + controller.name + 'Controller.php', false, 'UTF-8')]
+<?php	
+
+class [controller.name + 'Controller'/] extends MY_Controller
+{
+
+[for (method : Method | controller.methods)]
+	protected function [method.name.toLowerFirst()/]() {[comment].toLowerFirst()[/comment]
+		$inputParameters = ['['/][']'/];
+		[ for (inPar : Attribute | method.inParameters)]
+			[comment]array_merge(array("[inPar.name /]" => $this -> post("[inPar.name /]")), $inputParameters));[/comment]
+		$inputParameters['['/]count($inputParameters)[']'/] = array("[inPar.name /]" => $this -> post("[inPar.name /]"));
+		[ / for ]
+
+	}
+}
+[ / for ]
+
+[/file]
+
+[/template]
+

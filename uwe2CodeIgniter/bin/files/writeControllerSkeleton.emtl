@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="writeControllerSkeleton" nsURI="files::writeControllerSkeleton" startHeaderPosition="98" endHeaderPosition="198">
+    <documentation xsi:type="mtl:ModuleDocumentation">
+      <body startPosition="32" endPosition="95" value="&#xD;&#xA;The documentation of the module writeControllerSkeleton.&#xD;&#xA;&#xD;&#xA;"/>
+    </documentation>
+    <input>
+      <takesTypesFrom href="http://www.application.org/extPHP#/"/>
+      <takesTypesFrom href="http://www.application.org/extPHP#//coreMVC"/>
+      <takesTypesFrom href="http://www.application.org/extPHP#//extPHP"/>
+    </input>
+    <imports href="../services/helperApplication.emtl#/0"/>
+    <imports href="../main/view.emtl#/0"/>
+    <imports href="../services/helperController.emtl#/0"/>
+    <imports href="../services/helperCodeigniterInputPaths.emtl#/0"/>
+    <imports href="../services/helperStringUtil.emtl#/0"/>
+    <ownedModuleElement xsi:type="mtl:Documentation">
+      <body startPosition="353" endPosition="427" value="&#xD;&#xA;The documentation of the template generateElement.&#xD;&#xA;@param aModel&#xD;&#xA;&#xD;&#xA;"/>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Comment">
+      <body startPosition="441" endPosition="508" value="quiza pueda traer el path desde el helper y no pasarselo como param"/>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="writeControllerSkeleton" visibility="Public">
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;?php&#x9;&#xA;&#xA;class "/>
+        <body xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/+">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="controller" referredVariable="/0/writeControllerSkeleton/controller">
+              <eType xsi:type="ecore:EClass" href="http://www.application.org/extPHP#//coreMVC/Controller"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.application.org/extPHP#//coreMVC/MVCClass/name"/>
+          </source>
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Controller">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" extends MY_Controller&#xA;{&#xA;&#xA;"/>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;protected function "/>
+          <body xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/toLowerFirst">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="method" referredVariable="/0/writeControllerSkeleton/%/%.3/method">
+                <eType xsi:type="ecore:EClass" href="http://www.application.org/extPHP#//coreMVC/Method"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://www.application.org/extPHP#//coreMVC/Method/name"/>
+            </source>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="() {"/>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;&#x9;$inputParameters = "/>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=";&#xA;"/>
+          <body xsi:type="mtl:ForBlock">
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;$inputParameters"/>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="count($inputParameters)"/>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" = array(&quot;"/>
+            <body xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="inPar" referredVariable="/0/writeControllerSkeleton/%/%.3/%.7/inPar">
+                <eType xsi:type="ecore:EClass" href="http://www.application.org/extPHP#//coreMVC/Attribute"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://www.application.org/extPHP#//coreMVC/Attribute/name"/>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot; => $this -> post(&quot;"/>
+            <body xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="inPar" referredVariable="/0/writeControllerSkeleton/%/%.3/%.7/inPar">
+                <eType xsi:type="ecore:EClass" href="http://www.application.org/extPHP#//coreMVC/Attribute"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://www.application.org/extPHP#//coreMVC/Attribute/name"/>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;));&#xA;"/>
+            <loopVariable name="inPar">
+              <eType xsi:type="ecore:EClass" href="http://www.application.org/extPHP#//coreMVC/Attribute"/>
+            </loopVariable>
+            <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/9/OrderedSet(Attribute)">
+              <source xsi:type="ocl.ecore:VariableExp" name="method" referredVariable="/0/writeControllerSkeleton/%/%.3/method">
+                <eType xsi:type="ecore:EClass" href="http://www.application.org/extPHP#//coreMVC/Method"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.application.org/extPHP#//coreMVC/Method/inParameters"/>
+            </iterSet>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;}&#xA;}&#xA;"/>
+          <loopVariable name="method">
+            <eType xsi:type="ecore:EClass" href="http://www.application.org/extPHP#//coreMVC/Method"/>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/9/OrderedSet(Method)">
+            <source xsi:type="ocl.ecore:VariableExp" name="controller" referredVariable="/0/writeControllerSkeleton/controller">
+              <eType xsi:type="ecore:EClass" href="http://www.application.org/extPHP#//coreMVC/Controller"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.application.org/extPHP#//coreMVC/Controller/methods"/>
+          </iterSet>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/+">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/String_Class/+">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="path" referredVariable="/0/writeControllerSkeleton/path">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </source>
+            <argument xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="controller" referredVariable="/0/writeControllerSkeleton/controller">
+                <eType xsi:type="ecore:EClass" href="http://www.application.org/extPHP#//coreMVC/Controller"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://www.application.org/extPHP#//coreMVC/MVCClass/name"/>
+            </argument>
+          </source>
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Controller.php">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <parameter name="path">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </parameter>
+      <parameter name="controller">
+        <eType xsi:type="ecore:EClass" href="http://www.application.org/extPHP#//coreMVC/Controller"/>
+      </parameter>
+      <parameter name="appName">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </parameter>
+      <parameter name="pmName">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </parameter>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+      <eOperations name="toLowerFirst">
+        <eAnnotations source="MTL"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eOperations>
+      <eOperations name="+">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="other">
+          <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="writeControllerSkeleton">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/writeControllerSkeleton"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="path">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+        <eParameters name="controller">
+          <eType xsi:type="ecore:EClass" href="http://www.application.org/extPHP#//coreMVC/Controller"/>
+        </eParameters>
+        <eParameters name="appName">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+        <eParameters name="pmName">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Application_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.application.org/extPHP#//coreMVC/Application"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Boolean_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Method)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.application.org/extPHP#//coreMVC/Method"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Attribute)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.application.org/extPHP#//coreMVC/Attribute"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.application.org/extPHP#//coreMVC/Method"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.application.org/extPHP#//coreMVC/Method"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.application.org/extPHP#//coreMVC/Method"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.application.org/extPHP#//coreMVC/Method"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.application.org/extPHP#//coreMVC/Method"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.application.org/extPHP#//coreMVC/Attribute"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.application.org/extPHP#//coreMVC/Attribute"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.application.org/extPHP#//coreMVC/Attribute"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.application.org/extPHP#//coreMVC/Attribute"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.application.org/extPHP#//coreMVC/Attribute"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.application.org/extPHP#//coreMVC/Method"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/%">
+      <details key="start" value="29"/>
+      <details key="end" value="97"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/%.1">
+      <details key="start" value="350"/>
+      <details key="end" value="429"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/%.2">
+      <details key="start" value="432"/>
+      <details key="end" value="518"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/writeControllerSkeleton">
+      <details key="start" value="519"/>
+      <details key="end" value="1274"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/writeControllerSkeleton/%">
+      <details key="start" value="636"/>
+      <details key="end" value="1261"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/writeControllerSkeleton/%/%">
+      <details key="start" value="703"/>
+      <details key="end" value="717"/>
+      <details key="line" value="23"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/writeControllerSkeleton/%/%.1">
+      <details key="start" value="718"/>
+      <details key="end" value="748"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/writeControllerSkeleton/%/%.1/%">
+      <details key="start" value="718"/>
+      <details key="end" value="733"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/writeControllerSkeleton/%/%.1/%/controller">
+      <details key="start" value="718"/>
+      <details key="end" value="728"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/writeControllerSkeleton/%/%.1/%.1">
+      <details key="start" value="736"/>
+      <details key="end" value="748"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/writeControllerSkeleton/%/%.2">
+      <details key="start" value="750"/>
+      <details key="end" value="776"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/writeControllerSkeleton/%/%.3">
+      <details key="start" value="776"/>
+      <details key="end" value="1252"/>
+      <details key="line" value="28"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/writeControllerSkeleton/%/%.3/%">
+      <details key="start" value="821"/>
+      <details key="end" value="841"/>
+      <details key="line" value="29"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/writeControllerSkeleton/%/%.3/%.1">
+      <details key="start" value="842"/>
+      <details key="end" value="868"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/writeControllerSkeleton/%/%.3/%.1/%">
+      <details key="start" value="842"/>
+      <details key="end" value="853"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/writeControllerSkeleton/%/%.3/%.1/%/method">
+      <details key="start" value="842"/>
+      <details key="end" value="848"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/writeControllerSkeleton/%/%.3/%.2">
+      <details key="start" value="870"/>
+      <details key="end" value="874"/>
+      <details key="line" value="29"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/writeControllerSkeleton/%/%.3/%.3">
+      <details key="start" value="908"/>
+      <details key="end" value="930"/>
+      <details key="line" value="30"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/writeControllerSkeleton/%/%.3/%.4">
+      <details key="start" value="931"/>
+      <details key="end" value="934"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/writeControllerSkeleton/%/%.3/%.5">
+      <details key="start" value="937"/>
+      <details key="end" value="940"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/writeControllerSkeleton/%/%.3/%.6">
+      <details key="start" value="942"/>
+      <details key="end" value="944"/>
+      <details key="line" value="30"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/writeControllerSkeleton/%/%.3/%.7">
+      <details key="start" value="946"/>
+      <details key="end" value="1236"/>
+      <details key="line" value="31"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/writeControllerSkeleton/%/%.3/%.7/%">
+      <details key="start" value="1109"/>
+      <details key="end" value="1127"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/writeControllerSkeleton/%/%.3/%.7/%.1">
+      <details key="start" value="1128"/>
+      <details key="end" value="1131"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/writeControllerSkeleton/%/%.3/%.7/%.2">
+      <details key="start" value="1133"/>
+      <details key="end" value="1156"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/writeControllerSkeleton/%/%.3/%.7/%.3">
+      <details key="start" value="1157"/>
+      <details key="end" value="1160"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/writeControllerSkeleton/%/%.3/%.7/%.4">
+      <details key="start" value="1162"/>
+      <details key="end" value="1172"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/writeControllerSkeleton/%/%.3/%.7/%.5">
+      <details key="start" value="1173"/>
+      <details key="end" value="1183"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/writeControllerSkeleton/%/%.3/%.7/%.5/inPar">
+      <details key="start" value="1173"/>
+      <details key="end" value="1178"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/writeControllerSkeleton/%/%.3/%.7/%.6">
+      <details key="start" value="1186"/>
+      <details key="end" value="1206"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/writeControllerSkeleton/%/%.3/%.7/%.7">
+      <details key="start" value="1207"/>
+      <details key="end" value="1217"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/writeControllerSkeleton/%/%.3/%.7/%.7/inPar">
+      <details key="start" value="1207"/>
+      <details key="end" value="1212"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/writeControllerSkeleton/%/%.3/%.7/%.8">
+      <details key="start" value="1220"/>
+      <details key="end" value="1225"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/writeControllerSkeleton/%/%.3/%.7/inPar">
+      <details key="start" value="953"/>
+      <details key="end" value="970"/>
+      <details key="line" value="31"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/writeControllerSkeleton/%/%.3/%.7/%.9">
+      <details key="start" value="973"/>
+      <details key="end" value="992"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/writeControllerSkeleton/%/%.3/%.7/%.9/method">
+      <details key="start" value="973"/>
+      <details key="end" value="979"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/writeControllerSkeleton/%/%.3/%.8">
+      <details key="start" value="1237"/>
+      <details key="end" value="1243"/>
+      <details key="line" value="35"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/writeControllerSkeleton/%/%.3/method">
+      <details key="start" value="782"/>
+      <details key="end" value="797"/>
+      <details key="line" value="28"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/writeControllerSkeleton/%/%.3/%.9">
+      <details key="start" value="800"/>
+      <details key="end" value="818"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/writeControllerSkeleton/%/%.3/%.9/controller">
+      <details key="start" value="800"/>
+      <details key="end" value="810"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/writeControllerSkeleton/%/%.4">
+      <details key="start" value="1253"/>
+      <details key="end" value="1254"/>
+      <details key="line" value="39"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/writeControllerSkeleton/%/%.5">
+      <details key="start" value="643"/>
+      <details key="end" value="684"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/writeControllerSkeleton/%/%.5/%">
+      <details key="start" value="643"/>
+      <details key="end" value="665"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/writeControllerSkeleton/%/%.5/%/path">
+      <details key="start" value="643"/>
+      <details key="end" value="647"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/writeControllerSkeleton/%/%.5/%/%">
+      <details key="start" value="650"/>
+      <details key="end" value="665"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/writeControllerSkeleton/%/%.5/%/%/controller">
+      <details key="start" value="650"/>
+      <details key="end" value="660"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/writeControllerSkeleton/%/%.5/%.1">
+      <details key="start" value="668"/>
+      <details key="end" value="684"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/writeControllerSkeleton/%/%.6">
+      <details key="start" value="693"/>
+      <details key="end" value="700"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/writeControllerSkeleton/%.1">
+      <details key="start" value="1262"/>
+      <details key="end" value="1263"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/writeControllerSkeleton/path">
+      <details key="start" value="560"/>
+      <details key="end" value="573"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/writeControllerSkeleton/controller">
+      <details key="start" value="575"/>
+      <details key="end" value="598"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/writeControllerSkeleton/appName">
+      <details key="start" value="600"/>
+      <details key="end" value="616"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/writeControllerSkeleton/pmName">
+      <details key="start" value="618"/>
+      <details key="end" value="633"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>
