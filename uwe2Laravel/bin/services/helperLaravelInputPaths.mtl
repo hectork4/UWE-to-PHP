@@ -1,0 +1,16 @@
+[comment encoding = UTF-8 /]
+
+[module helperLaravelInputPaths('http://www.application.org')/]
+[import services::helperFQN  /]
+
+[query public getRoutesPath(anOclAny: OclAny) : String
+	= invoke(getLaravelInputPathsFQN(), 'getRoutesPath()', Sequence{})
+/]
+
+[query public setRoutesPath(arg0 : String) : OclVoid
+	= invoke(getLaravelInputPathsFQN(), 'setRoutesPath(java.lang.String)', Sequence{arg0})
+/]
+
+[query public getConfigAppPath(anOclAny: OclAny) : String
+	= invoke(getLaravelInputPathsFQN(), 'getConfigAppPath()', Sequence{})
+/]

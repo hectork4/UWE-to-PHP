@@ -1,0 +1,21 @@
+[comment encoding = UTF-8 /]
+[module helperLaravelPaths('http://www.application.org')/]
+[import services::helperFQN  /]
+
+[query public getBaseDir(anOclAny: OclAny) : String
+	= invoke(getLaravelPathsFQN(), 'getBaseDir()', Sequence{})
+/]
+
+[query public setBaseDir(arg0 : String) : OclVoid
+	= invoke(getLaravelPathsFQN(), 'setBaseDir(java.lang.String)', Sequence{arg0})
+/]
+
+[query public getLaravelVersion(anOclAny: OclAny) : String
+	= invoke(getLaravelPathsFQN(), 'getLaravelVersion()', Sequence{})
+/]
+
+[query public setLaravelVersion(arg0 : String) : OclVoid
+	= invoke(getLaravelPathsFQN(), 'setLaravelVersion(java.lang.String)', Sequence{arg0})
+/]
+
+

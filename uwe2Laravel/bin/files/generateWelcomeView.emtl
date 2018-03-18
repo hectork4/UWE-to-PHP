@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="generateWelcomeView" nsURI="files::generateWelcomeView" startHeaderPosition="83" endHeaderPosition="193">
+    <documentation xsi:type="mtl:ModuleDocumentation">
+      <body startPosition="32" endPosition="80" value="&#xD;&#xA;The documentation of the module generate.&#xD;&#xA;&#xD;&#xA;"/>
+    </documentation>
+    <input>
+      <takesTypesFrom href="http://www.application.org/extPHP#//coreMVC"/>
+    </input>
+    <imports href="../services/helperLaravelOutputPaths.emtl#/0"/>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateWelcomeView" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;!DOCTYPE html>&#xA;&lt;html lang=&quot;{{ config('app.locale') }}&quot;>&#xA;    &lt;head>&#xA;        &lt;meta charset=&quot;utf-8&quot;>&#xA;        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>&#xA;&#xA;        &lt;title>IFML2PHP&lt;/title>&#xA;&#xA;        &lt;!-- Fonts -->&#xA;        &lt;link href=&quot;https://fonts.googleapis.com/css?family=Raleway:100,600&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;>&#xA;&#xA;        &lt;!-- Styles -->&#xA;        &lt;style>&#xA;            html, body {&#xA;                background-color: #fff;&#xA;                color: #636b6f;&#xA;                font-family: 'Raleway', sans-serif;&#xA;                font-weight: 100;&#xA;                height: 100vh;&#xA;                margin: 0;&#xA;            }&#xA;&#xA;            .full-height {&#xA;                height: 100vh;&#xA;            }&#xA;&#xA;            .flex-center {&#xA;                align-items: center;&#xA;                display: flex;&#xA;                justify-content: center;&#xA;            }&#xA;&#xA;            .position-ref {&#xA;                position: relative;&#xA;            }&#xA;&#xA;            .top-right {&#xA;                position: absolute;&#xA;                right: 10px;&#xA;                top: 18px;&#xA;            }&#xA;&#xA;            .content {&#xA;                text-align: center;&#xA;            }&#xA;&#xA;            .title {&#xA;                font-size: 84px;&#xA;            }&#xA;&#xA;            .links > a {&#xA;                color: #636b6f;&#xA;                padding: 0 25px;&#xA;                font-size: 12px;&#xA;                font-weight: 600;&#xA;                letter-spacing: .1rem;&#xA;                text-decoration: none;&#xA;                text-transform: uppercase;&#xA;            }&#xA;&#xA;            .m-b-md {&#xA;                margin-bottom: 30px;&#xA;            }&#xA;        &lt;/style>&#xA;    &lt;/head>&#xA;    &lt;body>&#xA;        &lt;div class=&quot;flex-center position-ref full-height&quot;>&#xA;            @if (Route::has('login'))&#xA;                &lt;div class=&quot;top-right links&quot;>&#xA;                    @if (Auth::check())&#xA;                        &lt;a href=&quot;{{ url('/home') }}&quot;>Home&lt;/a>&#xA;                    @else&#xA;                        &lt;a href=&quot;{{ url('/login') }}&quot;>Login&lt;/a>&#xA;                        &lt;a href=&quot;{{ url('/register') }}&quot;>Register&lt;/a>&#xA;                    @endif&#xA;                &lt;/div>&#xA;            @endif&#xA;&#xA;            &lt;div class=&quot;content&quot;>&#xA;                &lt;div class=&quot;title m-b-md&quot;>&#xA;                    IFML2PHP&#xA;                &lt;/div>&#xA;&#xA;                &lt;div class=&quot;links&quot;>&#xA;                    &lt;a href=&quot;https://laravel.com/docs&quot;>Documentation&lt;/a>&#xA;                    &lt;a href=&quot;https://github.com/Dipiert/ifml2php&quot;>GitHub&lt;/a>&#xA;                &lt;/div>&#xA;            &lt;/div>&#xA;        &lt;/div>&#xA;    &lt;/body>&#xA;&lt;/html>&#xA;&#xA;"/>
+        <fileUrl xsi:type="mtl:QueryInvocation">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <definition href="../services/helperLaravelOutputPaths.emtl#/0/getWelcomeView"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/5">
+            <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+          </argument>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <documentation xsi:type="mtl:ModuleElementDocumentation">
+        <body startPosition="200" endPosition="325" value="&#xD;&#xA;The documentation of the template generateElement.'/laravel5.4.15/resources/views/welcome.blade.php'&#xD;&#xA;@param aModel&#xD;&#xA;&#xD;&#xA;"/>
+        <parametersDocumentation name="aModel">
+          <body value=""/>
+        </parametersDocumentation>
+      </documentation>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="generateWelcomeView">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateWelcomeView"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eOperations>
+      <eOperations name="getWelcomeView">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../services/helperLaravelOutputPaths.emtl#/0/getWelcomeView"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="anOclAny">
+          <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/%">
+      <details key="start" value="29"/>
+      <details key="end" value="82"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateWelcomeView">
+      <details key="start" value="328"/>
+      <details key="end" value="2926"/>
+      <details key="line" value="12"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateWelcomeView/%">
+      <details key="start" value="368"/>
+      <details key="end" value="369"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateWelcomeView/%.1">
+      <details key="start" value="369"/>
+      <details key="end" value="2914"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateWelcomeView/%.1/%">
+      <details key="start" value="413"/>
+      <details key="end" value="2907"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateWelcomeView/%.1/%.1">
+      <details key="start" value="377"/>
+      <details key="end" value="393"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateWelcomeView/%.1/%.1/self">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateWelcomeView/%.1/%.2">
+      <details key="start" value="403"/>
+      <details key="end" value="410"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateWelcomeView/%.2">
+      <details key="start" value="197"/>
+      <details key="end" value="327"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateWelcomeView/%.2/aModel">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

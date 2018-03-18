@@ -1,0 +1,92 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module.
+ */]
+
+[module helperLaravelOutputPaths('http://www.application.org')/]
+[import services::helperFQN  /]
+
+
+[**
+ * The documentation of the query
+ */]
+[query public getLaravelVersion(anOclAny: OclAny) : String
+	= invoke(getLaravelOutputPathsFQN(), 'getLaravelVersion()', Sequence{})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public setLaravelVersion(arg0 : String) : OclVoid
+	= invoke(getLaravelOutputPathsFQN(), 'setLaravelVersion(java.lang.String)', Sequence{arg0})
+/]
+
+[**
+ * The documentation of the query
+ */]
+[query public getModelsHome(anOclAny: OclAny) : String
+	= invoke(getLaravelOutputPathsFQN(), 'getModelsHome()', Sequence{})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public setModelsHome(arg0 : String) : OclVoid
+	= invoke(getLaravelOutputPathsFQN(), 'setModelsHome(java.lang.String)', Sequence{arg0})
+/]
+
+[**
+ * The documentation of the query
+ */]
+[query public getViewsHome(anOclAny: OclAny) : String
+	= invoke(getLaravelOutputPathsFQN(), 'getViewsHome()', Sequence{})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public setViewsHome(arg0 : String) : OclVoid
+	= invoke(getLaravelOutputPathsFQN(), 'setViewsHome(java.lang.String)', Sequence{arg0})
+/]
+
+[**
+ * The documentation of the query
+ */]
+[query public getControllersHome(anOclAny: OclAny) : String
+	= invoke(getLaravelOutputPathsFQN(), 'getControllersHome()', Sequence{})
+/]
+
+[**
+ * The documentation of the query
+ * @param arg0
+ */]
+[query public setControllersHome(arg0 : String) : OclVoid
+	= invoke(getLaravelOutputPathsFQN(), 'setControllersHome(java.lang.String)', Sequence{arg0})
+/]
+
+[query public getWelcomeView(anOclAny: OclAny) : String
+	= invoke(getLaravelOutputPathsFQN(), 'getWelcomeView()', Sequence{})
+/]
+
+[query public setWelcomeView(arg0 : String) : OclVoid
+	= invoke(getLaravelOutputPathsFQN(), 'setWelcomeView(java.lang.String)', Sequence{arg0})
+/]
+
+[query public getModelRequestsHome(anOclAny: OclAny) : String
+	= invoke(getLaravelOutputPathsFQN(), 'getModelRequestsHome()', Sequence{})
+/]
+
+[query public setModelRequestsHome(arg0 : String) : OclVoid
+	= invoke(getLaravelOutputPathsFQN(), 'setModelRequestsHome(java.lang.String)', Sequence{arg0})
+/]
+
+[query public getStylesheetsHome(anOclAny: OclAny) : String
+	= invoke(getLaravelOutputPathsFQN(), 'getStylesheetsHome()', Sequence{})
+/]
+
+[query public setStylesheetsHome(arg0 : String) : OclVoid
+	= invoke(getLaravelOutputPathsFQN(), 'setStyleSheetHome(java.lang.String)', Sequence{arg0})
+/]
